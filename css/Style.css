@@ -1,0 +1,750 @@
+@import url('Font Awesome 6 Brands-Regular-400.ttf');
+@import url('Font Awesome 6 Free-Regular-400.ttf');
+@import url('Font.ttf');
+@import url('segoeui.ttf');
+@import url('segoeuib.ttf');
+@import url('segoeuii.ttf');
+@import url('segoeuil.ttf');
+@import url('SEGOEUISL.TTF');
+@import url('segoeuiz.ttf');
+@import url('seguisb.ttf');
+*{
+	font-family: "Segoe UI", Sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+	transition: all .25s;
+}
+
+:root{
+	--bg-color: #202020;
+	--second-bg-color: #303030;
+	--txt-color: #e0e0e0;
+	--main-color: #8fefc4;
+}
+
+/*  
+####################
+#   ICON HANDLER   #
+####################
+*/
+
+.Icon, .Icon a {
+	font-size: 2rem;
+	border: 0;
+	outline: 0;
+	background: none;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	color: var(--txt-color);
+	width : 2rem;
+	height : 2rem;
+	display: contents;
+	text-align:center;
+}
+
+.Icon.Brand, .Icon.Brand a {
+	font-family: 'Font Awesome 6 Brands';
+}
+
+.Icon.Bold, .Icon.Bold a{
+	font-family: 'Font Awesome 6 Free Solid';
+}
+
+.Icon.Regular, .Icon.Regular a{
+	font-family: 'Font Awesome 6 Free Regular';
+}
+
+
+/*  
+########################
+#   ICON HANDLER END   #
+########################
+*/
+
+@keyframes Rainbow{
+	0%{
+		--main-color: hsl(0deg  75% 75%);
+	}
+	17%{
+		--main-color: hsl(60deg 75% 75%);
+	}
+	33%{
+		--main-color: hsl(120deg 75% 75%);
+	}
+	50%{
+		--main-color: hsl(180deg 75% 75%);
+	}
+	67%{
+		--main-color: hsl(240deg 75% 75%);
+	}
+	84%{
+		--main-color: hsl(300deg 75% 75%);
+	}
+	100%{
+		--main-color: hsl(0deg  75% 75%);
+	}
+}
+
+html{
+	font-size: 1rem;
+	overflow-x: hidden;
+	animation: Rainbow 10s linear(0 0%, 1 100%) infinite;
+}
+
+body{
+	background: var(--bg-color);
+	color: var(--txt-color);
+}
+
+.Header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 4.5rem;
+	background: var(--bg-color);
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99999;
+	display: flex;
+	transition: all .25s;
+}
+
+.Header.ShadowFlow{
+	box-shadow: 0 0 1rem rgb(0, 0, 0);
+}
+
+section{
+	min-height:100vh;
+	padding: 10rem 4.5rem 2rem;
+}
+
+.Logo{
+	font-size: 2.5rem;
+	color: var(--txt-color);
+	font-weight: 600;
+	cursor: default;
+}
+
+.Navbar a{
+	font-size: 1.5rem;
+	color: var(--txt-color);
+	margin-left: 4rem;
+	transition: all .25s;
+}
+
+.Navbar a:hover, 
+.Navbar a.active{
+	border-color: var(--main-color);
+}
+
+#MenuIcon{
+	Display: none;
+}
+
+.Home{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.HomeContent h3{
+	font-size: 3.25rem;
+	font-weight: 700;
+}
+
+.HomeContent h3:nth-of-type(2){
+	margin-bottom:2rem;
+}
+
+.HomeContent p{
+	font-size: 1.5rem;
+}
+
+
+span{
+	color: var(--main-color);
+	text-shadow: 0 0 1rem var(--main-color);
+}
+
+.HomeContent h1{
+	font-size: 5.5rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.Links .Icon{
+	Display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	background: transparent;
+	border:.25rem solid var(--main-color);
+	border-radius: .5rem;
+	font-size:2rem;
+	color:var(--main-color);
+	margin: 3rem 1.5rem 3rem 0;
+	transition: all .25s;
+}
+
+.Links a {
+	font-size: 2rem;
+	color: var(--main-color);
+	transition: all .25s;
+}
+
+.Links .Icon:hover{
+	background: var(--main-color);
+	box-shadow: 0 0 1rem var(--main-color);
+}
+.Links .Icon:hover a{
+	color: var(--second-bg-color);
+}
+
+.button{
+	display: inline-block;
+	padding: 1rem 2.75rem;
+	background: var(--main-color);
+	border-radius: .5rem;
+	box-shadow: 0 0 1rem var(--main-color);
+	font-size: 1.5rem;
+	color: var(--second-bg-color);
+	font-weight:600;
+	transition: all .25s;
+}
+.button .Icon{
+	color: var(--second-bg-color);
+}
+
+.button:hover{
+	box-shadow: 0 0 1rem transparent;
+}
+
+.HomeHero img{
+	width: 33vw;
+	animation: Pulse 2s cubic-bezier(0.5, 0, 0, 1) infinite;
+}
+
+@keyframes Pulse{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.025);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.About{
+	Display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	background: var(--second-bg-color);
+}
+
+.AboutHero img{
+	width: 33vw;
+}
+
+.heading{
+	text-align: center;
+	font-size: 4.5rem;
+}
+
+.AboutContent h2 {
+	text-align: left;
+	line-height: 1.25;
+}
+
+.AboutContent h3{
+	font-size: 2.5rem;
+}
+
+.AboutContent p{
+	font-size: 1.5rem;
+	margin: 2rem 0 3rem;
+}
+
+.Capabilities h2{
+	margin-top: 5rem;
+}
+
+.PowerContainers{
+	Display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap:2rem;
+}
+
+.PowerContainers .PowerContainer{
+	flex: 1 1 30rem;
+	background: var(--second-bg-color);
+	padding: 3rem 2rem 4rem;
+	border-radius: .5rem;
+	text-align:center;
+	border: .25rem solid var(--bg-color);
+	transition: all .25s;
+}
+
+.PowerContainers .PowerContainer:hover{
+	border-color: var(--main-color);
+	transform: scale(1.02);
+}
+
+.PowerContainer .Icon{
+	font-size: 7rem;
+	Height: 7rem;
+	color: var(--main-color);
+	transition: all .25s;
+}
+
+.PowerContainers .PowerContainer:hover .Icon{
+	text-shadow: 0 0 .5rem var(--main-color);
+}	
+
+.PowerContainer h3{
+	font-size: 2.5rem;
+}
+
+.PowerContainer p{
+	font-size: 1.5rem;
+	margin: 1rem 0 3rem;
+}
+
+.PowerContainer .DocLink{
+	color: var(--txt-color);
+	text-decoration: underline;
+}
+
+.Tutorials{
+	background: var(--second-bg-color);
+}
+
+.Tutorials h2{
+	margin-bottom: 4rem;
+}
+
+.TutorialsContainer{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items:center;
+	gap: 2rem; 
+}
+
+.TutorialsContainer .Tutorial{
+	position: relative;
+	border-radius: .5rem;
+	box-shadow: 0 0 1rem var(--main-color);
+	overflow: hidden;
+	display: flex;
+}
+
+.Tutorial img{
+	width: 100%;
+	height: 100%;
+	transition: all .25s;
+}
+
+.Tutorial:hover img {
+	transform: scale(1.1);
+	filter: blur(.25rem);
+}
+
+.Tutorial .DescriptionLayer{
+	position: absolute;
+	bottom: 0;
+	left: 0; 
+	width: 100%;
+	min-height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0), var(--main-color));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 
+	text-align: center;
+	padding: 0 4rem;
+	transform: translateY(100%);
+	transition: all .25s;
+	color: var(--bg-color);
+	font-weight:500;
+}
+.Tutorial .DescriptionLayer span{
+	color: var(--bg-color);
+	font-weight:900;
+}
+
+.Tutorial:hover .DescriptionLayer{
+	transform: translateY(0);
+}
+
+.DescriptionLayer h4 {
+	font-size: 3rem;
+}
+
+.DescriptionLayer p {
+	font-size: 1.5rem;
+	margin: .25rem 0 1rem;
+}
+
+.DescriptionLayer a{
+	Display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 5rem;
+	height: 5rem;
+	background: var(--bg-color);
+	border-radius: .5rem;
+	transition: all .25s;
+}
+
+.DescriptionLayer a:hover{
+	transform: scale(1.1);
+}
+
+
+.DescriptionLayer a .Icon{
+	font-size: 2rem;
+	color: var(--txt-color);
+}
+
+.Download{
+	margin-bottom: 3rem;
+}
+
+.Download .heading{
+	margin-bottom: 2rem;
+}
+
+.Download .DownloadBox {
+	margin: 1rem auto 3rem auto;
+	padding: 1rem;
+	background: var(--second-bg-color);
+	Height: 50vh;
+	display: flex;
+	align-items: center;
+	border-radius: .5rem;
+}
+.DownloadBox .ItemContainer {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.DownloadBox h3{
+	Font-size: 2rem;
+	Font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.DownloadButtons{
+	display: flex;
+	justify-content: center;
+	Gap:2rem;
+	align-items: center;
+	width: 100%
+}
+
+.Download p{
+	margin-top: 1rem;
+	font-size: 1.25rem;
+}
+
+.Contact{
+	margin-bottom: 3rem;
+	background: var(--second-bg-color);
+}
+
+.Contact form{
+	max-width: 70rem;
+	margin: 1rem auto 3rem auto;
+	text-align: center;
+}
+
+.Contact form .InputBox{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.Contact form .InputBox input, .Contact form textarea{
+	width: 100%;
+	padding: 1.5rem;
+	Font-size: 1.5rem;
+	color: var(--txt-color);
+	background: var(--bg-color);
+	border-radius: .5rem;
+	margin: .75rem 0;
+}
+
+.Contact form .InputBox input{
+	width: 49%;
+}
+
+.Contact form textarea{ 
+	resize: none;
+}
+
+.Contact .button {
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.Footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2rem 4.5rem;
+	background: var(--bg-color);
+}
+
+.Footer p{
+	Font-size: 1.5rem;
+}
+
+.ToTheTop a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: .75rem; 
+	background: var(--main-color);
+	border-radius: .5rem;
+	transition: all .25s;
+}
+
+.ToTheTop a:hover{
+	box-shadow: 0 0 1rem var(--main-color);
+}
+
+.ToTheTop a .Icon{
+	Font-size: 2.5rem;
+	color: var(--bg-color);
+}
+
+/* BreakPoints */
+
+
+@media (max-width: 1370px){
+	html{
+		Font-size: 12px;
+	}
+}
+
+@media (max-width: 1200px){
+	html{
+		Font-size: 8px;
+	}
+}
+
+@media (max-width: 990px){
+	header, footer{
+		padding: 2rem 2.25rem;
+	}
+	
+	.Capabilities{
+		padding-bottom: 7rem;
+	}
+	
+	.Tutorials{
+		padding-bottom: 7rem;
+	}
+	
+	section {
+		padding: 10rem 2.25rem 2rem;
+	}
+	
+	.Contact{
+		min-height: auto;
+	}
+}
+
+@media (max-width: 770px){
+	#MenuIcon{
+		display: block;
+		cursor: pointer;
+	}
+	
+	.Navbar{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 1rem 2.25rem;
+		background: var(--bg-color);
+		box-shadow: 0 0 1rem rgb(0, 0, 0);
+		Display: none;
+		transition: a11 .25s;
+	}
+	
+	.Navbar a{
+		Display: block;
+		font-size: 2rem;
+		margin: 3rem 0;
+	}
+	
+	.Navbar.active{
+		Display: block;
+	}
+	
+	.Home{
+		flex-direction:column;
+	}
+	
+	.HomeContent h3{
+		Font-size: 2.5rem;
+	}
+	
+	.HomeContent h1{
+		font-size: 5rem;
+	}
+	
+	.HomeHero img{
+		width: 75vw;
+		margin-top: 4rem;
+	}
+	
+	.About{
+		flex-direction:column-reverse;
+	}
+	
+	.AboutHero img{
+		width: 75vw;
+		margin-top: 4rem;
+	}
+	
+	.Capabilities h2{
+		margin-bottom: 3rem;
+	}
+	
+	.DownloadBox .DownloadButtons{
+		flex-direction: column;
+	}
+	
+	.Tutorials h2{
+		margin-bottom: 3rem;
+	}
+	
+	.Tutorials .TutorialsContainer{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 620px){
+	.Tutorials .TutorialsContainer{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 450px){
+	html {
+		font-size: 50%;
+	}
+	
+	.Contact form .InputBox Input{
+		width: 100%; 
+	}
+}
+
+@media (max-width: 370px){
+	.HomeHero img, .AboutHero img{
+		width: 90vw;
+	}
+	
+	footer{
+		flex-direction: column-reverse;
+		gap: 1.5rem;
+	}
+}
+
+@media(prefers-reduced-motion){
+	.hidden {transition:none;}
+}
+
+.Hidden{
+	opacity:0;
+	transition: transform 1s, opacity 1s;
+}
+
+/* Home */
+
+.HomeContent h1.Hidden, .HomeContent h3.Hidden, .HomeContent p.Hidden{
+	transform: translateX(-100%);
+}  
+
+.HomeContent h1.Show, .HomeContent h3.Show, .HomeContent p.Show{
+	transform: translateX(0%);
+} 
+ 
+.HomeContent p.Hidden{
+	transition-delay:200ms;
+}
+ 
+.HomeContent p.Show{
+	transition-delay:200ms;
+}
+
+.HomeContent .Links button.Hidden{
+	transform: translateX(-100%);
+	opacity: 0;
+}
+
+.HomeContent .Links button:nth-of-type(2).Hidden, .HomeContent .Links button:nth-of-type(2).Show{
+	transition-delay:50ms, 50ms;
+	transition-property:transform, opacity;
+}
+.HomeContent .Links button:nth-of-type(3).Hidden, .HomeContent .Links button:nth-of-type(3).Show{
+	transition-delay:100ms, 100ms;
+	transition-property:transform, opacity;
+}
+.HomeContent .Links button:nth-of-type(4).Hidden, .HomeContent .Links button:nth-of-type(4).Show{
+	transition-delay:250ms, 250ms;
+	transition-property:transform, opacity;
+}
+
+.HomeContent .Links button.Show{
+	transform: translateX(0%);
+	opacity: 1;
+}
+/* about */
+
+.AboutContent h1.Hidden, .AboutContent h2.Hidden, .AboutContent h3.Hidden, .AboutContent p.Hidden{
+	transform: translateX(100%);
+}  
+
+.AboutContent h1.Show, .AboutContent h2.Show, .AboutContent h3.Show, .AboutContent p.Show{
+	transform: translateX(0%);
+} 
+ 
+.AboutContent p.Hidden{
+	transition-delay:200ms;
+}
+ 
+.AboutContent p.Show{
+	transition-delay:200ms;
+}
+
+/* Capabilities */
+
+.heading.Hidden{
+	transform: translateY(-100%);
+}
+
+.heading.Show{
+	transform: translateY(0%);
+}
+
+.Show{
+	transition: transform 1s, opacity 1s;
+	opacity:1;
+}
