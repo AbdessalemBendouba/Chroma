@@ -47,13 +47,13 @@ window.onscroll = () => {
 
 function showAnimation() {
 	HiddenElements.forEach((entry) =>{
-		
-		const Bounds = entry.getBoundingClientRect();
-			
-		if ((Bounds.top < 150 && Bounds.bottom < 150) || (Bounds.top > vh(100) && Bounds.bottom > vh(100))){
-			entry.classList.remove('Show');
-		} else {
-			entry.classList.add('Show');
+		if(entry.classList.contains("Menu") == false){
+			const Bounds = entry.getBoundingClientRect();
+				if ((Bounds.top < 150 && Bounds.bottom < 150) || (Bounds.top > vh(100) && Bounds.bottom > vh(100))){
+				entry.classList.remove('Show');
+			} else {
+				entry.classList.add('Show');
+			}
 		}
 	});
 }
